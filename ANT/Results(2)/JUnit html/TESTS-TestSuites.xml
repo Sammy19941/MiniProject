@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite failures="0" hostname="ibm-samarthshekhar" id="0" name="MiniProjecgt/tests" package="" skipped="0" tests="5" time="407.691" timestamp="Tue Mar 15 17:36:56 IST 2022">
+	    <properties>
+		      <property name="excludeCallableTestCases" value="true" />
+
+		      <property name="testEnvironment" value="TestEnv" />
+
+		      <property name="pluginOutputLevel" value="WARNING" />
+
+		      <property name="projectPath" value=".." />
+
+		      <property name="salesforceMetadataCache" value="Reuse" />
+
+		      <property name="resultsPathDisposition" value="Increment" />
+
+		      <property name="testOutputLevel" value="INFO" />
+
+		      <property name="webBrowserType" value="Chrome" />
+
+		      <property name="resultsPath" value="../ANT/Results" />
+
+		      <property name="webBrowserConfiguration" value="Full Screen" />
+
+		      <property name="projectCachePath" value="C:\Users\samarth.shekhar\Provar\MiniProject\MiniProjecgt\ANT\..\..\.provarCaches" />
+
+	    </properties>
+
+	    <testcase classname="tests/Trial2\TrialSetvalues.setup" name="TrialSetvalues.setup" time="0.063">
+	</testcase>
+
+	    <testcase classname="tests/Trial2\Trial1AutomatingthesalesprocessonSalescloud.testcase" name="Trial1AutomatingthesalesprocessonSalescloud.testcase" time="238.402">
+	</testcase>
+
+	    <testcase classname="tests/Trial2\Trial2CreatingCaseOnServiceCloud.testcase" name="Trial2CreatingCaseOnServiceCloud.testcase" time="151.06">
+	</testcase>
+
+	    <testcase classname="tests/Trial2\Trial3ProvarWithWebservices.testcase" name="Trial3ProvarWithWebservices.testcase" time="2.175">
+	</testcase>
+
+	    <testcase classname="tests/Trial2\Trial4RetrievingURLFromEmail.testcase" name="Trial4RetrievingURLFromEmail.testcase" time="7.363">
+	</testcase>
+
+	    <testcase classname="tests/Trial2\Trial5CreateaCustomAPI.testcase" name="Trial5CreateaCustomAPI.testcase" time="0.008">
+	</testcase>
+
+  </testsuite>
+</testsuites>

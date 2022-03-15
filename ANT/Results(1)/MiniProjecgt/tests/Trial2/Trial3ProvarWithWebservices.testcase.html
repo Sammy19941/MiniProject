@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div style='float: right;'><img src='../../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> Trial3ProvarWithWebservices.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:34 (00:00.000)</span></div>Start of Test Case Trial3ProvarWithWebservices.testcase</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:34 (00:00.000)</span></div>Start of Test Step Web Connect: API</div><div class='TestOutput inf'>Opening RestService connection  Connection name: API</div><div class='TestOutput inf'>Connecting to restservice.  Address: https://jsonplaceholder.typicode.com/</div><div class='TestOutput off'>  Connection name: API, ResultName: API, resultScope: Test</div><div class='TestOutput inf'>Connection details.  Connection name: API, urlString: restservice:url=https://jsonplaceholder.typicode.com/;authenticationType=NO_AUTHENTICATION, url: https://jsonplaceholder.typicode.com/</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:34 (00:00.010)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:34 (00:00.010)</span></div>Start of Test Step Web Request (REST): ⇒RestResponsePost</div><div class='TestOutput inf'>Calling a Web Service.  Connection Name: API, target: rest:untyped?method=GET&bodyStyle=JSON</div><div class='TestOutput inf'>Connecting to website.  Address: https://jsonplaceholder.typicode.com/posts/1</div><div class='TestOutput inf'>Reading response.  Content Type: application/json; charset=utf-8, Encoding: null</div><div class='TestOutput inf'>Parsing JSON response.</div><div class='TestOutput inf'>REST Response stored successfully.  Name: RestResponsePost</div><div class='TestOutput inf'>Web Response Status stored successfully.  Name: RestResponseStatus</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:35 (00:01.195)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:35 (00:01.195)</span></div>Start of Test Step Web Request (REST): ⇒RestResponseComment</div><div class='TestOutput inf'>Calling a Web Service.  Connection Name: API, target: rest:untyped?method=GET&bodyStyle=JSON</div><div class='TestOutput inf'>Connecting to website.  Address: https://jsonplaceholder.typicode.com/comments/1</div><div class='TestOutput inf'>Reading response.  Content Type: application/json; charset=utf-8, Encoding: null</div><div class='TestOutput inf'>Parsing JSON response.</div><div class='TestOutput inf'>REST Response stored successfully.  Name: RestResponseComment</div><div class='TestOutput inf'>Web Response Status stored successfully.  Name: RestResponseStatus</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:35 (00:01.426)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:35 (00:01.426)</span></div>Start of Test Step Web Request (REST): ⇒RestResponsePost</div><div class='TestOutput inf'>Calling a Web Service.  Connection Name: API, target: rest:untyped?method=POST&bodyStyle=JSON</div><div class='TestOutput inf'>Connecting to website.  Address: https://jsonplaceholder.typicode.com/posts</div><div class='TestOutput inf'>Sending body.  Length: 83</div><div class='TestOutput inf'>Reading response.  Content Type: application/json; charset=utf-8, Encoding: null</div><div class='TestOutput inf'>Parsing JSON response.</div><div class='TestOutput inf'>REST Response stored successfully.  Name: RestResponsePost</div><div class='TestOutput inf'>Web Response Status stored successfully.  Name: RestResponseStatus</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:36 (00:01.840)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:36 (00:01.840)</span></div>Start of Test Step Web Request (REST): ⇒RestResponsePut</div><div class='TestOutput inf'>Calling a Web Service.  Connection Name: API, target: rest:untyped?method=PUT&bodyStyle=JSON</div><div class='TestOutput inf'>Connecting to website.  Address: https://jsonplaceholder.typicode.com/posts/1</div><div class='TestOutput inf'>Sending body.  Length: 83</div><div class='TestOutput inf'>Reading response.  Content Type: application/json; charset=utf-8, Encoding: null</div><div class='TestOutput inf'>Parsing JSON response.</div><div class='TestOutput inf'>REST Response stored successfully.  Name: RestResponsePut</div><div class='TestOutput inf'>Web Response Status stored successfully.  Name: RestResponseStatus</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:36 (00:02.255)</span></div>Test Step successful.</div></div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>17:33:36 (00:02.256)</span></div>Test Case successful.</div></div><div class='TestOutput inf'>Handling managed resource.  Name: API</div><div class='TestOutput off'>RestServiceConnection handled successfully.  Name: API</div>
+	</div></body>
+</html>

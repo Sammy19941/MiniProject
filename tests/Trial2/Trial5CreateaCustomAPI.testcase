@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="25">
+  <summary/>
+  <steps>
+    <apiCall apiId="customapis.GetFirstDateOfCurrentMonth" name="GetFirstDateOfCurrentMonth" testItemId="1" title="Get First Date Of Current Month: ⇒ date">
+      <arguments>
+        <argument id="resultName">
+          <value class="value" valueClass="string">date</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>
