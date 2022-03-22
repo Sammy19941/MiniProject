@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="1">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.messaging.Subscribe" name="Subscribe" testItemId="1" title="Subscribe: GoogleEmail">
+      <arguments>
+        <argument id="sourceConnectionName">
+          <value class="value" valueClass="string">GoogleEmail</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">mail</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="folder"/>
+        <argument id="from">
+          <value class="value" valueClass="string">samarth.shekhar@provartesting.com</value>
+        </argument>
+        <argument id="subject">
+          <value class="value" valueClass="string">URL</value>
+        </argument>
+        <argument id="parseAttachment"/>
+      </arguments>
+      <generatedParameters>
+        <param group="source" linkedToUrl="connectionParam:sourceConnectionName" name="folder" title="Folder">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="source" linkedToUrl="connectionParam:sourceConnectionName" name="from" title="From">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="source" linkedToUrl="connectionParam:sourceConnectionName" name="subject" title="Subject">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="source" linkedToUrl="connectionParam:sourceConnectionName" name="parseAttachment" title="Read Email Attachments">
+          <type>
+            <booleanType/>
+          </type>
+        </param>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.messaging.SendMessage" name="SendMessage" testItemId="2" title="Send Message: GoogleEmail">
+      <arguments>
+        <argument id="destinationConnectionName">
+          <value class="value" valueClass="string">GoogleEmail</value>
+        </argument>
+        <argument id="body">
+          <value class="value" valueClass="string">Hello abc\nI am working in Provar as a trainee and would be completing my training soon. For more details about provar please go through this link https://www.provartesting.com/\n</value>
+        </argument>
+        <argument id="payloadFormat">
+          <value class="value" valueClass="string">Auto</value>
+        </argument>
+        <argument id="attachments">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="to">
+          <value class="value" valueClass="string">samarth.shekhar@provartesting.com</value>
+        </argument>
+        <argument id="cc"/>
+        <argument id="bcc"/>
+        <argument id="subject">
+          <value class="value" valueClass="string">URL</value>
+        </argument>
+        <argument id="signature"/>
+      </arguments>
+      <generatedParameters>
+        <param group="destination" linkedToUrl="connectionParam:destinationConnectionName" mandatory="true" name="to" title="To">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="destination" linkedToUrl="connectionParam:destinationConnectionName" name="cc" title="CC">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="destination" linkedToUrl="connectionParam:destinationConnectionName" name="bcc" title="BCC">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="payload" linkedToUrl="connectionParam:destinationConnectionName" name="subject" title="Subject">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="payload" linkedToUrl="connectionParam:destinationConnectionName" name="signature" title="Signature">
+          <type>
+            <textType/>
+          </type>
+        </param>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.WaitFor" name="WaitFor" testItemId="3" title="Wait For: {mail.messageCount &gt; 0}=&gt;{30}">
+      <arguments>
+        <argument id="condition">
+          <value class="gt">
+            <lhs class="variable">
+              <path element="mail"/>
+              <path element="messageCount"/>
+            </lhs>
+            <rhs class="value" valueClass="decimal">0</rhs>
+          </value>
+        </argument>
+        <argument id="testAtStart"/>
+        <argument id="maxIterations">
+          <value class="value" valueClass="decimal">5</value>
+        </argument>
+        <argument id="sleepSecs">
+          <value class="value" valueClass="decimal">30</value>
+        </argument>
+        <argument id="continueOnFailure"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="4"/>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.string.Match" name="Match" testItemId="5" title="Match: {mail.messages.bodyText}=&gt;\\b((?:https?|ftp|file)://[-a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*)=&gt;ExtractedURL">
+      <arguments>
+        <argument id="input">
+          <value class="variable">
+            <path element="mail"/>
+            <path element="messages"/>
+            <path element="bodyText"/>
+          </value>
+        </argument>
+        <argument id="regex">
+          <value class="value" valueClass="string">\\b((?:https?|ftp|file)://[-a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*)</value>
+        </argument>
+        <argument id="caseInsensitive"/>
+        <argument id="resultName">
+          <value class="value" valueClass="string">ExtractedURL</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>
